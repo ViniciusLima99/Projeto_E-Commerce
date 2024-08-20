@@ -1,0 +1,23 @@
+{% load bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{% endblock %}E-commerce</title>    
+    <link rel="stylesheet" href="{% static 'global/assets/bootstrap/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'global/assets/custom/css/style.css'%}">
+    
+</head>
+<body>
+    {% include 'global/partials/_nav.html' %}
+
+    <main class="container mt-4 mb-4">
+        {% include 'global/partials/_messages.html' %}
+        {% block conteudo %}{% endblock %}
+    </main>
+
+    {% include 'global/partials/_footer.html' %}
+</body>
+</html>
